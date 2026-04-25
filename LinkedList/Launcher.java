@@ -1,4 +1,4 @@
-package com.example.labwork1;
+package com.example.LinkedList;
 
 import javafx.application.Application;
 
