@@ -1,4 +1,4 @@
-package com.example.classicallinkedlist;
+package com.example.ClassicalLinkedList;
 
 public class LinkedList<T> {
     private Node<T> front;

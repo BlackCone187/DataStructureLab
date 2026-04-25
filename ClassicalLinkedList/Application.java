@@ -1,4 +1,4 @@
-package com.example.classicallinkedlist;
+package com.example.ClassicalLinkedList;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;

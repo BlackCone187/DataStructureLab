@@ -1,4 +1,4 @@
-package com.example.classicallinkedlist;
+package com.example.ClassicalLinkedList;
 
 public class Launcher {
     public static void main(String[] args) {
