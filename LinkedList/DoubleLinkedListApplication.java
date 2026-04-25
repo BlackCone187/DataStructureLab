@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class LinkedListApplication extends Application {
+public class DoubleLinkedListApplication extends Application {
     @Override
     public void start(Stage stage) {
 

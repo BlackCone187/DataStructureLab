@@ -1,5 +1,7 @@
 package com.example.DoubleLinkedList;
 
+import com.example.LinkedList.LinkedList;
+
 public class DoubleLinkedList<T> {
     private Node<T> front, back;
     private int size;
@@ -12,7 +14,7 @@ public class DoubleLinkedList<T> {
 
     public void addFirst(T element) {
         Node<T> newNode = new Node<>(element);
-        if (size == 0) {
+        if (size() == 0) {
             front = back = newNode;
         }
         else {
@@ -25,7 +27,7 @@ public class DoubleLinkedList<T> {
 
     public void addLast(T element) {
         Node<T> newNode = new Node<>(element);
-        if (size == 0) {
+        if (size() == 0) {
             front = back = newNode;
         }
         else {
@@ -38,17 +40,17 @@ public class DoubleLinkedList<T> {
 
     public void add(T element, int index) {
 
-        if (size == 0) {
+        if (size() == 0) {
             front = back = new Node<>(element);
             size++;
         }
         else if (index == 0) {
             addFirst(element);
         }
-        else if (index == size) {
+        else if (index == size()) {
             addLast(element);
         }
-        else if (index > 0 && index < size) {
+        else if (index > 0 && index < size()) {
             Node<T> newNode = new Node<>(element);
             Node<T> current = front;
 
@@ -68,14 +70,14 @@ public class DoubleLinkedList<T> {
     }
 
     public void add(T element) {
-        add(element, size);
+        add(element, size());
     }
 
     public boolean removeFirst() {
-        if (size == 0) {
+        if (size() == 0) {
             return false;
         }
-        else if (size == 1) {
+        else if (size() == 1) {
             front = back = null;
         }
         else {
@@ -88,10 +90,10 @@ public class DoubleLinkedList<T> {
     }
 
     public boolean removeLast() {
-        if (size == 0) {
+        if (size() == 0) {
             return false;
         }
-        else if (size == 1) {
+        else if (size() == 1) {
             front = back = null;
         }
         else {
@@ -104,16 +106,16 @@ public class DoubleLinkedList<T> {
     }
 
     public boolean remove(int index) {
-        if (size == 0) {
+        if (size() == 0) {
             return false;
         }
         else if (index == 0) {
             return removeFirst();
         }
-        else if (index == size-1) {
+        else if (index == size()-1) {
             return removeLast();
         }
-        else if (index > 0 && index < size-1) {
+        else if (index > 0 && index < size()-1) {
             Node<T> current = front;
             for (int i = 0; i < index; i++) {
                 current = current.getNext();
@@ -133,7 +135,7 @@ public class DoubleLinkedList<T> {
     }
 
     public T getFirst() {
-        if (size == 0) {
+        if (size() == 0) {
             return null;
         }
         else {
@@ -142,7 +144,7 @@ public class DoubleLinkedList<T> {
     }
 
     public T getLast() {
-        if (size == 0) {
+        if (size() == 0) {
             return null;
         }
         else {
@@ -151,16 +153,16 @@ public class DoubleLinkedList<T> {
     }
 
     public T get(int index) {
-        if (size == 0) {
+        if (size() == 0) {
             return null;
         }
         else if (index == 0) {
             return getFirst();
         }
-        else if (index == size-1) {
+        else if (index == size()-1) {
             return getLast();
         }
-        else if (index > 0 && index < size-1) {
+        else if (index > 0 && index < size()-1) {
             Node<T> current = front;
             for (int i = 0; i < index; i++) {
                 current = current.getNext();
@@ -170,5 +172,47 @@ public class DoubleLinkedList<T> {
         else {
             return null;
         }
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public void radixSort() {
+        int max = getMax();
+
+
+    }
+
+    public int getMax() {
+        if (size() == 0) {
+            return 0;
+        }
+        else {
+            int max = (Integer) front.getElement();
+            Node<T> temp = front;
+            while (temp != null) {
+                if ((Integer) temp.getElement() > max) {
+                    max = (Integer) temp.getElement();
+                    temp = temp.getNext();
+                }
+            }
+            return max;
+        }
+    }
+
+    @Override
+    public String toString() {
+        String s = "[";
+        Node<T> current = front;
+        while (current != null) {
+            s += current.getElement();
+            if (current.getNext() != null) {
+                s += ", ";
+            }
+            current = current.getNext();
+        }
+        s += "]";
+        return s;
     }
 }
