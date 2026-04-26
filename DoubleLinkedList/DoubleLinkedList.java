@@ -201,18 +201,10 @@ public class DoubleLinkedList<T> {
         }
     }
 
-    @Override
-    public String toString() {
-        String s = "[";
-        Node<T> current = front;
-        while (current != null) {
-            s += current.getElement();
-            if (current.getNext() != null) {
-                s += ", ";
-            }
-            current = current.getNext();
+    public void traverse(Node<T> current) {
+        if (current != null) {
+            System.out.println(current.getElement());
+            traverse(current.getNext());
         }
-        s += "]";
-        return s;
     }
 }
