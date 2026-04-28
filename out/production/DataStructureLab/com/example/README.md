@@ -1,2 +1,2 @@
-# DataStructureLab
-Important lab classes
+# Singly/Doubly Linked list
+Needed for future projects
