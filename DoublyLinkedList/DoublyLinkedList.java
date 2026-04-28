@@ -172,6 +172,7 @@ public class DoublyLinkedList<T> {
         }
     }
 
+
     public int size() {
         return size;
     }
