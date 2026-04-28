@@ -1,4 +1,4 @@
-package com.example.DoubleLinkedList;
+package com.example.CircularDoublyLinkedList;
 
 public class Node<T> {
     private T element;

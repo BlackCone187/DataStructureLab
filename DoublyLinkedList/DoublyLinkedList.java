@@ -1,12 +1,10 @@
-package com.example.DoubleLinkedList;
+package com.example.DoublyLinkedList;
 
-import com.example.LinkedList.LinkedList;
-
-public class DoubleLinkedList<T> {
+public class DoublyLinkedList<T> {
     private Node<T> front, back;
     private int size;
 
-    public DoubleLinkedList() {
+    public DoublyLinkedList() {
         front = null;
         back = null;
         size = 0;
@@ -178,41 +176,10 @@ public class DoubleLinkedList<T> {
         return size;
     }
 
-    public void radixSort() {
-        int max = getMax();
-
-
-    }
-
-    public int getMax() {
-        if (size() == 0) {
-            return 0;
+    public void traverse(Node<T> current) {
+        if (current != null) {
+            System.out.println(current.getElement());
+            traverse(current.getNext());
         }
-        else {
-            int max = (Integer) front.getElement();
-            Node<T> temp = front;
-            while (temp != null) {
-                if ((Integer) temp.getElement() > max) {
-                    max = (Integer) temp.getElement();
-                    temp = temp.getNext();
-                }
-            }
-            return max;
-        }
-    }
-
-    @Override
-    public String toString() {
-        String s = "[";
-        Node<T> current = front;
-        while (current != null) {
-            s += current.getElement();
-            if (current.getNext() != null) {
-                s += ", ";
-            }
-            current = current.getNext();
-        }
-        s += "]";
-        return s;
     }
 }

@@ -38,7 +38,7 @@ public class LinkedList<T> {
         else {
             Node<T> current = front;
             while (current.getNext() != null) {
-                current.setNext(current.getNext());
+                current = current.getNext();
             }
             current.setNext(newNode);
         }
@@ -74,9 +74,9 @@ public class LinkedList<T> {
         else {
             Node<T> current = front;
             while (current.getNext() != null) {
-                current=current.getNext();
+                current = current.getNext();
             }
-            current = null;
+            current.setNext(null);
             return true;
         }
     }
