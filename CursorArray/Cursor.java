@@ -80,7 +80,7 @@ public class Cursor<T> {
             return;
         }
         int temp = cursorArray[l].getNext();
-        for (int i = 0; i < index && cursorArray[temp].getNext() != 0; i++) {
+        for (int i = 0; i < index; i++) {
             temp = cursorArray[temp].getNext();
         }
 

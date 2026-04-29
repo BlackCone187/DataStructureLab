@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a414fa0e-22bc-4c2b-98e0-093f4e95a5e9" name="Changes" comment="Final work baby">
-      <change afterPath="$PROJECT_DIR$/CursorArray/Cursor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CursorArray/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a414fa0e-22bc-4c2b-98e0-093f4e95a5e9" name="Changes" comment="new package: Cursor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777408843142</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="new package: Cursor">
+      <option name="closed" value="true" />
+      <created>1777470727957</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777470727957</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +157,7 @@
     <MESSAGE value="added doubly linked list" />
     <MESSAGE value="lab work" />
     <MESSAGE value="Final work baby" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final work baby" />
+    <MESSAGE value="new package: Cursor" />
+    <option name="LAST_COMMIT_MESSAGE" value="new package: Cursor" />
   </component>
 </project>
