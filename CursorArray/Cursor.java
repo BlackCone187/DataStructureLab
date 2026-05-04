@@ -4,7 +4,7 @@ public class Cursor<T> {
     private Node<T>[] cursorArray;
     private static final int MAX_SIZE = 10;  // fixed array size = 10
 
-    @SuppressWarnings("unchecked")
+
     public Cursor() {
         cursorArray = (Node<T>[]) new Node[MAX_SIZE];
     }
@@ -31,7 +31,7 @@ public class Cursor<T> {
 
     public boolean isNull(int l) {
         // return true if the list not created
-        return cursorArray[l]==null;
+        return cursorArray[l] == null;
     }
 
     public boolean isEmpty(int l) {
@@ -130,5 +130,35 @@ public class Cursor<T> {
             p = cursorArray[p].getNext();
         }
         return p;
+    }
+
+    public boolean removeFirst(int l) {
+        if (isNull(l)) {
+            return false;
+        } else
+
+        return true;
+    }
+
+    public boolean removeLast() {
+        return true;
+    }
+
+    public boolean removeIndex(int index) {
+        return true;
+    }
+
+    public void removeData(Object data,int l) {
+        int pos = findPrevious(data,l);//Implementation left as
+//an exercise
+        if( cursorArray[pos].getNext() != 0 ){//!isLast (pos)
+            int temp = cursorArray[pos].getNext();
+            cursorArray[pos].setNext(cursorArray[temp].getNext());
+            cursorFree(temp);
+        }
+    }
+
+    private int findPrevious(Object data, int l) {
+        return 0;
     }
 }
