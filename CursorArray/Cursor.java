@@ -136,7 +136,7 @@ public class Cursor<T> {
     }
 
     public boolean removeFirst(int l) {
-        if (isNull(l)) {
+        if (isNull(l) || isEmpty(l)) {
             return false;
         }
         int temp = cursorArray[l].getNext();
@@ -183,7 +183,7 @@ public class Cursor<T> {
 
     public void removeData(Object data,int l) {
         int pos = findPrevious(data,l);
-        if(!isLast(pos)){//!isLast (pos)
+        if(!isLast(pos)){
             int temp = cursorArray[pos].getNext();
             cursorArray[pos].setNext(cursorArray[temp].getNext());
             cursorFree(temp);
