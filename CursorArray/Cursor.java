@@ -61,6 +61,9 @@ public class Cursor<T> {
         if (isNull(l)) {
             return;
         }
+        if (isEmpty(l)) {
+            addFirst(data, l);
+        }
         // find last
         int temp = cursorArray[l].getNext();
         while (cursorArray[temp].getNext() != 0) {
@@ -135,16 +138,46 @@ public class Cursor<T> {
     public boolean removeFirst(int l) {
         if (isNull(l)) {
             return false;
-        } else
-
+        }
+        int temp = cursorArray[l].getNext();
+        cursorArray[l].setNext(cursorArray[temp].getNext());
+        cursorFree(temp);
         return true;
     }
 
-    public boolean removeLast() {
+    public boolean removeLast(int l) {
+        if (isNull(l) || isEmpty(l)) {
+            return false;
+        }
+
+        int p = l;
+        while (cursorArray[cursorArray[p].getNext()].getNext() != 0) {
+            p = cursorArray[p].getNext();
+        }
+        int temp = cursorArray[p].getNext();
+        cursorArray[p].setNext(0);
+        cursorFree(temp);
         return true;
     }
 
-    public boolean removeIndex(int index) {
+    public boolean removeIndex(int index, int l) {
+        if (isNull(l) || isEmpty(l)) {
+            return false;
+        }
+        int prev = l;
+
+        for (int i = 0; i < index; i++) {
+            prev = cursorArray[prev].getNext();
+
+            if (prev == 0 || isLast(prev)) {
+                return false; // out of bound
+            }
+        }
+        int temp = cursorArray[prev].getNext();
+
+        cursorArray[prev].setNext(cursorArray[temp].getNext());
+        cursorFree(temp);
+
         return true;
     }
 
@@ -157,7 +190,11 @@ public class Cursor<T> {
         }
     }
 
-    private int findPrevious(Object data, int l) {
-        return 0;
+    private int findPrevious(Object element, int l) {
+        int pos = l;
+        while (cursorArray[pos].getNext() != 0 && !cursorArray[cursorArray[pos].getNext()].getElement().equals(element)) {
+            pos = cursorArray[pos].getNext();
+        }
+        return pos;
     }
 }
