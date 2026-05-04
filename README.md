@@ -1,2 +1,2 @@
-# Singly/Doubly Linked list
-Needed for future projects
+# Data Structure Lab
+Important data structure packages that contains classes for future projects
