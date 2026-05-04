@@ -149,9 +149,8 @@ public class Cursor<T> {
     }
 
     public void removeData(Object data,int l) {
-        int pos = findPrevious(data,l);//Implementation left as
-//an exercise
-        if( cursorArray[pos].getNext() != 0 ){//!isLast (pos)
+        int pos = findPrevious(data,l);
+        if(!isLast(pos)){//!isLast (pos)
             int temp = cursorArray[pos].getNext();
             cursorArray[pos].setNext(cursorArray[temp].getNext());
             cursorFree(temp);
