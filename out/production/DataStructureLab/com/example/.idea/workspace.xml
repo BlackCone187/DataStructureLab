@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a414fa0e-22bc-4c2b-98e0-093f4e95a5e9" name="Changes" comment="lab work">
-      <change afterPath="$PROJECT_DIR$/CircularDoublyLinkedList/CircularDoublyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CircularDoublyLinkedList/Launcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CircularDoublyLinkedList/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CircularLinkedList/CircularLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CircularLinkedList/Launcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CircularLinkedList/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoublyLinkedList/Launcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RadixSort/RadixSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassicalLinkedList/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassicalLinkedList/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClassicalLinkedList/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleLinkedList/DoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoublyLinkedList/DoublyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleLinkedList/DoubleLinkedListApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleLinkedList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoublyLinkedList/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedList/DoubleLinkedListApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedList/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedList/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedList/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedList/StudentPane.java" beforeDir="false" />
+    <list default="true" id="a414fa0e-22bc-4c2b-98e0-093f4e95a5e9" name="Changes" comment="remove methods">
+      <change afterPath="$PROJECT_DIR$/Stack/Launcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stack/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stack/StackArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stack/StackLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +52,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.mainApplication.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
@@ -124,13 +112,124 @@
       <option name="project" value="LOCAL" />
       <updated>1777117955899</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Final work baby">
+      <option name="closed" value="true" />
+      <created>1777408116941</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777408116941</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Final work baby">
+      <option name="closed" value="true" />
+      <created>1777408413053</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777408413053</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Final work baby">
+      <option name="closed" value="true" />
+      <created>1777408843142</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777408843142</updated>
+    </task>
+    <task id="LOCAL-00009" summary="new package: Cursor">
+      <option name="closed" value="true" />
+      <created>1777470727957</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777470727957</updated>
+    </task>
+    <task id="LOCAL-00010" summary="new package: Cursor">
+      <option name="closed" value="true" />
+      <created>1777471308101</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777471308101</updated>
+    </task>
+    <task id="LOCAL-00011" summary="new package: Cursor">
+      <option name="closed" value="true" />
+      <created>1777471346822</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777471346822</updated>
+    </task>
+    <task id="LOCAL-00012" summary="new package: Cursor">
+      <option name="closed" value="true" />
+      <created>1777907881491</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777907881491</updated>
+    </task>
+    <task id="LOCAL-00013" summary="new package: Cursor">
+      <option name="closed" value="true" />
+      <created>1777909414361</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777909414361</updated>
+    </task>
+    <task id="LOCAL-00014" summary="new package: Cursor">
+      <option name="closed" value="true" />
+      <created>1777909598778</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777909598778</updated>
+    </task>
+    <task id="LOCAL-00015" summary="edit some methods in cursor">
+      <option name="closed" value="true" />
+      <created>1777909709919</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1777909709919</updated>
+    </task>
+    <task id="LOCAL-00016" summary="remove methods">
+      <option name="closed" value="true" />
+      <created>1777913781081</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1777913781081</updated>
+    </task>
+    <task id="LOCAL-00017" summary="remove methods">
+      <option name="closed" value="true" />
+      <created>1777913997407</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1777913997407</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rename" />
     <MESSAGE value="added doubly linked list" />
     <MESSAGE value="lab work" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab work" />
+    <MESSAGE value="Final work baby" />
+    <MESSAGE value="new package: Cursor" />
+    <MESSAGE value="edit some methods in cursor" />
+    <MESSAGE value="remove methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove methods" />
   </component>
 </project>
