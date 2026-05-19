@@ -27,4 +27,8 @@ public class Launcher {
         }
         return stackLinkedList.isEmpty();
     }
+
+////    public static String MakePostFix(String ) {
+////
+//    }
 }
