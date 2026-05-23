@@ -27,7 +27,7 @@ public class Launcher {
         System.out.println();
 
         // 5. Testing index-based removal
-        list.remove(0);
+        System.out.println(list.remove(0));
         System.out.println("Final size: " + list.size());
     }
 }

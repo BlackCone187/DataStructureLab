@@ -123,7 +123,6 @@ public class DoublyLinkedList<T> {
 
             current.setNext(null);
             current.setPrev(null);
-            current = null;
             size--;
             return true;
         }

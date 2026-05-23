@@ -4,7 +4,7 @@ public class Cursor<T> {
     private Node<T>[] cursorArray;
     private static final int MAX_SIZE = 10;  // fixed array size = 10
 
-
+    @SuppressWarnings("unchecked")
     public Cursor() {
         cursorArray = (Node<T>[]) new Node[MAX_SIZE];
     }
