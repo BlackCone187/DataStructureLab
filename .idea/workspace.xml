@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a414fa0e-22bc-4c2b-98e0-093f4e95a5e9" name="Changes" comment="remove methods">
+    <list default="true" id="a414fa0e-22bc-4c2b-98e0-093f4e95a5e9" name="Changes" comment="edit DoublyLinkedList">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CursorArray/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/CursorArray/Cursor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoublyLinkedList/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoublyLinkedList/DoublyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoublyLinkedList/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/DoublyLinkedList/Launcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779212831668</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="edit DoublyLinkedList">
+      <option name="closed" value="true" />
+      <created>1779571752759</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1779571752759</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +251,7 @@
     <MESSAGE value="new package: Cursor" />
     <MESSAGE value="edit some methods in cursor" />
     <MESSAGE value="remove methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove methods" />
+    <MESSAGE value="edit DoublyLinkedList" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit DoublyLinkedList" />
   </component>
 </project>

@@ -2,13 +2,13 @@ package com.example.Stack;
 
 public class Node<T> {
     private T element;
-    private Node next;
+    private Node<T> next;
 
     public Node(T element) {
         this(element, null);
     }
 
-    public Node(T element, Node next) {
+    public Node(T element, Node<T> next) {
         this.element = element;
         this.next = next;
     }
@@ -21,11 +21,11 @@ public class Node<T> {
         this.element = element;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 }
