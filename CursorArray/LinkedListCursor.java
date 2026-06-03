@@ -21,7 +21,7 @@ public class LinkedListCursor<T> {
     }
 
     public boolean isNull() {
-        if (cursorLinkedList.size() < l) {
+        if (cursorLinkedList.size() < 0) {
             return true;
         }
         return cursorLinkedList.getFirst() == null;
