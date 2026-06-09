@@ -1,5 +1,8 @@
 package com.example.BinaryTree;
 
+import com.example.Queue.QueueLinkedList;
+
+
 public class BST<T extends Comparable<T>> {
     private BSTNode<T> root;
 
@@ -7,7 +10,7 @@ public class BST<T extends Comparable<T>> {
         root = null;
     }
 
-    public boolean contains(T e, BSTNode<T> current) {
+    private boolean contains(T e, BSTNode<T> current) {
         if (current == null)
             return false; // empty
 
@@ -24,7 +27,7 @@ public class BST<T extends Comparable<T>> {
         return contains(e, root);
     }
 
-    public BSTNode<T> find(T element, BSTNode<T> current) {
+    private BSTNode<T> find(T element, BSTNode<T> current) {
         if (current == null)
             return null; // empty
 
@@ -43,7 +46,7 @@ public class BST<T extends Comparable<T>> {
     }
 
 
-    public BSTNode<T> insert(T element, BSTNode<T> current) {
+    private BSTNode<T> insert(T element, BSTNode<T> current) {
         if (current == null)
             current = new BSTNode<>(element); // create one node tree
 
@@ -59,7 +62,7 @@ public class BST<T extends Comparable<T>> {
     }
 
     public void insert(T e) {
-        insert(e, root);
+        root = insert(e, root);
     }
 
     private BSTNode<T> findMin(BSTNode<T> current) {
@@ -106,12 +109,14 @@ public class BST<T extends Comparable<T>> {
     }
 
     public BSTNode<T> remove(T e) {
-        return remove(e, root);
+        BSTNode<T> removed = find(e, root);
+        root = remove(e, root);
+        return removed;
     }
 
     private void printPre(BSTNode<T> current) {
         if (current != null) {
-            System.out.println(current.element);
+            System.out.print(current.element + " ");
             printPre(current.left);
             printPre(current.right);
         }
@@ -124,7 +129,7 @@ public class BST<T extends Comparable<T>> {
     private void printIn(BSTNode<T> current) {
         if (current != null) {
             printIn(current.left);
-            System.out.println(current.element);
+            System.out.print(current.element + " ");
             printIn(current.right);
         }
     }
@@ -137,7 +142,7 @@ public class BST<T extends Comparable<T>> {
         if (current != null) {
             printPost(current.left);
             printPost(current.right);
-            System.out.println(current.element);
+            System.out.print(current.element + " ");
         }
     }
 
@@ -147,10 +152,29 @@ public class BST<T extends Comparable<T>> {
 
 
 
-//    public void printLevel(BSTNode<T> current) {
-//
-//        if (current != null) {
-//
-//        }
-//    }
+    private void printLevel(BSTNode<T> current) {
+
+        if (current == null) {
+            return;
+        }
+
+        QueueLinkedList<BSTNode<T>> queue = new QueueLinkedList<>();
+        queue.enQueue(root);
+
+        while (!queue.isEmpty()) {
+            BSTNode<T> node = queue.deQueue();
+            System.out.print(node.getElement() + " ");
+
+            if (node.left != null) {
+                queue.enQueue(node.left);
+            }
+            if (node.right != null) {
+                queue.enQueue(node.right);
+            }
+        }
+    }
+
+    public void printLevel() {
+        printLevel(root);
+    }
 }

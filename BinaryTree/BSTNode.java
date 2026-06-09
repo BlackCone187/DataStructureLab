@@ -12,4 +12,8 @@ public class BSTNode<T> {
         this.left = left;
         this.right = right;
     }
+
+    public T getElement() {
+        return element;
+    }
 }
