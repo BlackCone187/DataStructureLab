@@ -12,12 +12,15 @@ public class Driver {
         bst.insert(25);
         bst.insert(-2);
 
-        bst.printLevel();
-        System.out.println();
-        bst.printPre();
-        System.out.println();
-        bst.printPost();
-        System.out.println();
-        bst.printIn();
+//        bst.printLevel();
+
+        AVL<Integer> avl = new AVL<>();
+        avl.insert(4);
+        avl.insert(1);
+        avl.insert(3);
+        avl.insert(7);
+        avl.insert(20);
+
+        avl.printIn();
     }
 }

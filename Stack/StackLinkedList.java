@@ -1,6 +1,5 @@
 package com.example.Stack;
 
-import java.util.Stack;
 
 public class StackLinkedList<T> {
     private int size;

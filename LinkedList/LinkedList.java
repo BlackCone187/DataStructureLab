@@ -143,6 +143,20 @@ public class LinkedList<T> {
         }
     }
 
+    public boolean remove(T value) {
+        if (size() == 0) {
+            return false;
+        }else {
+            Node<T> current = front;
+            while (current.getElement() != value) {
+                current = current.getNext();
+            }
+            current.setNext(current.getNext().getNext());
+            size--;
+            return true;
+        }
+    }
+
     public void traverse(Node<T> current) {
         if (current != null) {
             System.out.println(current.getElement());
