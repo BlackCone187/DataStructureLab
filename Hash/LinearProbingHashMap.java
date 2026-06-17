@@ -1,24 +1,98 @@
 package com.example.Hash;
 
-import com.example.LinkedList.LinkedList;
-
 public class LinearProbingHashMap<T> {
     private HashEntry<T>[] hashEntries;
+    private int size;
+    private static final int DEFAULT_CAPACITY = 11;
+    private static final double LOAD_FACTOR = 0.75;
 
     @SuppressWarnings("unchecked")
     public LinearProbingHashMap() {
-        hashEntries = new HashEntry[11];
+        hashEntries = new HashEntry[DEFAULT_CAPACITY];
+        size = 0;
     }
 
+    // Hash function should only take the key, no 'i' variable
     private int hashFunction(int key) {
-        return ((key % hashEntries.length)+i) % hashEntries.length;
+        return Math.abs(key % hashEntries.length);
     }
 
     public void insert(int key, T value) {
-        key = hashFunction(key);
-        if (hashEntries[key] == null || key > hashEntries.length) {
-            insert(key+1, value);
+        // resize if load factor exceeded
+        if ((double) size / hashEntries.length >= LOAD_FACTOR) {
+            resize();
         }
-        hashEntries[key].add(new HashEntry<>(key, value));
+        int index = hashFunction(key);
+
+        int i = 0;
+        while (i < hashEntries.length) {
+            int probeIndex = (index + i) % hashEntries.length;
+            HashEntry<T> entry = hashEntries[probeIndex];
+
+            if (entry == null || entry.getStatus() == 'D') {
+                hashEntries[probeIndex] = new HashEntry<>(key, value);
+                hashEntries[probeIndex].setStatus('F');
+                size++;
+                return;
+            }
+
+            if (entry.getKey() == key) {
+                entry.setValue(value);
+                return;
+            }
+
+            i++;
+        }
+    }
+
+    public T search(int key) {
+        int index = hashFunction(key);
+
+        for (int i = 0; i < hashEntries.length; i++) {
+            int probeIndex = (index + i) % hashEntries.length;
+            HashEntry<T> entry = hashEntries[probeIndex];
+
+            if (entry == null) return null; // Key not found
+
+            if (entry.getKey() == key && entry.getStatus() == 'O') {
+                return entry.getValue();
+            }
+        }
+        return null;
+    }
+
+    public boolean remove(int key) {
+        int index = hashFunction(key);
+
+        for (int i = 0; i < hashEntries.length; i++) {
+            int probeIndex = (index + i) % hashEntries.length;
+            HashEntry<T> entry = hashEntries[probeIndex];
+
+            if (entry == null) return false; // Key not found
+
+            if (entry.getKey() == key && entry.getStatus() == 'F') {
+                entry.setStatus('D');
+                size--;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @SuppressWarnings("unchecked")
+    private void resize() {
+        HashEntry<T>[] old = hashEntries;
+        hashEntries = new HashEntry[old.length * 2 + 1]; // keep it odd/prime-ish
+        size = 0;
+
+        for (HashEntry<T> entry : old) {
+            if (entry != null && entry.getStatus() == 'O') {
+                insert(entry.getKey(), entry.getValue());
+            }
+        }
+    }
+
+    public int getSize() {
+        return size;
     }
 }
